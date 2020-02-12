@@ -10,6 +10,8 @@ This repository documents my class work and projects done for **CPS342**.
     
     Major: *Computer Engineering*
     
+    Minor: *Computer Science*
+    
     ID: [N03135548](https://github.com/bigE163)
     
     Year: *Senior*
