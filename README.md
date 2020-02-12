@@ -1,5 +1,19 @@
-# EL1998
-# This is for Embedded Linux Spring 2020
+![Image of logo](https://www.newpaltz.edu/media/identity/logos/newpaltzlogo.jpg)
 
-This is my (Alex A.K.A. coolHackerDude) class repository. All work here is 
-mine, except otherwise noted. Please do not break my things.
+# Spring 2020 Embedded Linux Class
+
+This repository documents my class work and projects done for **CPS342**.
+
+1. **Personal Information**
+    Name: *Alexander Estrella*
+    
+    Major: *Computer Engineering*
+    
+    ID: [N03135548] [https://github.com/bigE163)
+    
+    Year: *Senior*
+    
+2. **Class Start Date:** Jan 22, 2020
+
+3. **Class End Date:**May 7, 2020
+    
