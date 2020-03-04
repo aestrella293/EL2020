@@ -11,27 +11,19 @@ read -p "Let Time Begin! (Press 'Enter' to start to start the 'Stopwatch'!)" sta
 
 stop=0
 
-echo  "Start! Press 'Enter' to stop the Stopwatch" 
+echo  "Start! Press 'Ctrl + Z' to stop the Stopwatch" 
 start_time=0
 
 current_time=0
 
 total_time=0
 
-if  [ $stop != "" ]
-then
-	while [ $stop != "" ]
-	do
-		sleep 1
-		let current_time++
-		echo $current_time
-		if [ $stop == " " ]
-		then
-			break
-		fi
-	done
-fi
-echo "The total time of the race was: " + $total_time
+while  :
+do
+	sleep 1
+	let current_time++
+	echo $current_time
+done
 
 
 
