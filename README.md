@@ -20,4 +20,4 @@ This repository documents my class work and projects done for ***CPS342***.
 
 3. **Class End Date:** May 7, 2020
 
-
+4. This branch is meant for us to output the temperature of the sensor to the .csv file
