@@ -3,6 +3,8 @@ import Adafruit_DHT
 import RPi.GPIO as GPIO
 import time
 import os
+#import sqlite as mydb
+#import sys
 
 #assign GPIO pins
 tempPin = 27
@@ -54,8 +56,9 @@ try:
 			log.write("{0},{1},{2}\n".format(time.strftime ("%Y-%m-%d, %H:%M:%S "), str(data1) , str(data2)))
 			log.flush()
 			os.fsync(log)
-			print ('wrote')
+			print ('sleeping 60s')
 			time.sleep(60)
+
 
 except KeyboardInterrupt:
 	os.system('clear')
