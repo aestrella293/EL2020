@@ -36,23 +36,26 @@ def readF(tempPin):
 	else:
 		print ('Error Reading the Sensor')
 	return tempFahr
-
+def readH(tempPin):
+	humidity, temperature = Adafruit_DHT.read_retry(tempSensor, tempPin)
+	humidity = humidity
+	if humidity != 0 and temperature != 0:
+		tempHumid = ' , {0:0.1f} %H' .format(humidity)
+	else:
+		print ('Error Reading the Sensor')
+	return tempHumid
 #Use the blinkOnce function in a loop when the button is pressed
 try:
 	with open("../log/tempLog.csv" , "a") as log:
 		while True:
-			input_state = GPIO.input(buttonPin)
-			if input_state == False:
-				for i in range (blinkTime):
-					oneBlink(redPin)
-				time.sleep(.3)
-				data1 = readF(tempPin)
-				#data2 = readH(tempPin)
-				print ('The Temperature is ' + data1)
-				#print ('The Humidity is ' + data2)
-				log.write("{0},{1}\n".format(time.strftime ("%Y-%m-%d, %H:%M:%S "), str(data1))) #, str(data2)))
-				log.flush()
-				os.fsync(log)
+			data1 = readF(tempPin)
+			data2 = readH(tempPin)
+			print ('The Temperature is ' + data1 + ' The Humidity is ' + data2)
+			log.write("{0},{1},{2}\n".format(time.strftime ("%Y-%m-%d, %H:%M:%S "), str(data1) , str(data2)))
+			log.flush()
+			os.fsync(log)
+			print ('wrote')
+			time.sleep(60)
 
 except KeyboardInterrupt:
 	os.system('clear')
