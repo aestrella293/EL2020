@@ -50,7 +50,7 @@ try:
 				#data2 = readH(tempPin)
 				print ('The Temperature is ' + data1)
 				#print ('The Humidity is ' + data2)
-				log.write("{0},{1}\n".format(time.strftime ("%Y -%m -%d %H:%M:%S"),str(data1))) #, str(data2)))
+				log.write("{0},{1}\n".format(time.strftime ("%Y-%m-%d, %H:%M:%S "), str(data1))) #, str(data2)))
 				log.flush()
 				os.fsync(log)
 
