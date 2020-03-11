@@ -39,13 +39,13 @@ def readF(tempPin):
 
 #Use the blinkOnce function in a loop when the button is pressed
 try:
-	with open("log/tempLog.csv" , "a") as log:
+	with open("../log/tempLog.csv" , "a") as log:
 		while True:
 			input_state = GPIO.input(buttonPin)
 			if input_state == False:
 				for i in range (blinkTime):
 					oneBlink(redPin)
-				time.sleep(.2)
+				time.sleep(.3)
 				data1 = readF(tempPin)
 				#data2 = readH(tempPin)
 				print ('The Temperature is ' + data1)
